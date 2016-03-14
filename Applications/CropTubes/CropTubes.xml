@@ -32,6 +32,13 @@
       <description>Volume Mask Image.</description>
       <longflag>mask</longflag>
     </image>
+    <boolean>
+      <name>InvertVolumeMask</name>
+      <label>Invert Volume Mask</label>
+      <description>Invert the volume mask before cropping.</description>
+      <default>false</default>
+      <longflag>invertVolumeMask</longflag>
+    </boolean>
     <double-vector>
       <name>boxCorner</name>
       <label>Bottom Left Corner of Bounding Box</label>

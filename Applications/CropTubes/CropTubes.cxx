@@ -28,6 +28,7 @@
 
 #include "itkGroupSpatialObject.h"
 #include "itkImageFileReader.h"
+#include "itkInvertIntensityImageFilter.h"
 #include "itkSpatialObjectReader.h"
 #include "itkSpatialObjectWriter.h"
 #include "itkTimeProbesCollectorBase.h"
@@ -234,6 +235,18 @@ int DoIt (int argc, char * argv[])
       return EXIT_FAILURE;
       }
     timeCollector.Stop( "Load Volume Mask" );
+
+    if( InvertVolumeMask )
+      {
+      typedef itk::InvertIntensityImageFilter <ImageType>
+      InvertIntensityImageFilterType;
+      typename InvertIntensityImageFilterType::Pointer invertIntensityFilter
+        = InvertIntensityImageFilterType::New();
+      invertIntensityFilter->SetInput( image );
+      invertIntensityFilter->SetMaximum( 1 );
+      invertIntensityFilter->Update();
+      image = invertIntensityFilter->GetOutput();
+      }
     }
 
   std::vector< PointType > endPointList;
