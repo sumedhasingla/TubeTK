@@ -61,8 +61,7 @@ target_include_directories( ${PROJECT_NAME} INTERFACE
 
 target_link_libraries( ${PROJECT_NAME} INTERFACE
    TubeTKFiltering
-   TubeTKNumerics
-   MinimalPathExtraction )
+   TubeTKNumerics )
 
 if( TubeTK_BUILD_TESTING )
   add_subdirectory( Testing )
