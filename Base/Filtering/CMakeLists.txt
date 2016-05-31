@@ -35,6 +35,7 @@ set( TubeTK_Base_Filtering_H_Files
   itktubeAnisotropicHybridDiffusionImageFilter.h
   itktubeComputeTubeFlyThroughImageFilter.h
   itktubeConvertSpatialGraphToImageFilter.h
+  itktubeConvertTreToVTKPolyDataFilter.h
   itktubeCropImageFilter.h
   itktubeCropTubesFilter.h
   itktubeCVTImageFilter.h
@@ -68,6 +69,7 @@ set( TubeTK_Base_Filtering_HXX_Files
   itktubeAnisotropicHybridDiffusionImageFilter.hxx
   itktubeComputeTubeFlyThroughImageFilter.hxx
   itktubeConvertSpatialGraphToImageFilter.hxx
+  itktubeConvertTreToVTKPolyDataFilter.hxx
   itktubeCropImageFilter.hxx
   itktubeCropTubesFilter.hxx
   itktubeCVTImageFilter.hxx
